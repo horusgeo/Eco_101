@@ -111,6 +111,11 @@ function loadKml(){
             myMap.fitBounds(runLayer.getBounds());
         }).addTo(myMap);
 
+//    var runLayer1 = omnivore.kml('./kml/km2.kml')
+//            .on('ready', function() {
+//                myMap.fitBounds(runLayer.getBounds(), {icon: iconYellowPin});
+//            }).addTo(myMap);
+
 //    var kmLayer = omnivore.kml('./kml/KM.kml')
 //        .on('ready', function() {
 //            myMap.fitBounds(runLayer.getBounds());

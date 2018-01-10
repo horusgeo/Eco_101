@@ -417,7 +417,7 @@ public class MappingActivity extends AppCompatActivity {
             }
         }
 
-        myWebView.loadUrl("javascript:loadImg('/storage/sdcard1/www')");
+       //myWebView.loadUrl("javascript:loadImg('/storage/sdcard1/www')");
         myWebView.loadUrl("javascript:loadImg('/storage/extSdCard/www')");
         myWebView.loadUrl("javascript:loadKml()");
         myWebView.loadUrl("javascript:addProp()");
