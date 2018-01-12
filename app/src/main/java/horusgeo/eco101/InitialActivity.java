@@ -380,7 +380,7 @@ public class InitialActivity extends AppCompatActivity {
 
             try{
                 client.connect("ftp.horusgeo.com.br", 21);
-                teste = client.login("horusgeo", "eco101web");
+                teste = client.login("horusgeo", "h0ru5!g30");
 
                 client.enterLocalPassiveMode();
 

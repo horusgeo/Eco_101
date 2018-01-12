@@ -1,6 +1,6 @@
 myMap = L.map('mapDiv',{
                 minZoom: 9,
-                maxZoom: 21})
+                maxZoom: 20})
                 .setView([-19.315, -43.636], 15);
 //myMap = L.map('mapDiv',{});
 
@@ -69,7 +69,7 @@ function loadImg(imgPath){
 
     var options = {
                 minZoom: 9,
-                maxZoom: 21,
+                maxZoom: 20,
                 opacity: 1.0,
                 tms: false
     };
@@ -111,9 +111,9 @@ function loadKml(){
             myMap.fitBounds(runLayer.getBounds());
         }).addTo(myMap);
 
-//    var runLayer1 = omnivore.kml('./kml/km2.kml')
+//    var runLayer1 = omnivore.kml('./kml/KM.kml')
 //            .on('ready', function() {
-//                myMap.fitBounds(runLayer.getBounds(), {icon: iconYellowPin});
+//                myMap.fitBounds(runLayer.getBounds());
 //            }).addTo(myMap);
 
 //    var kmLayer = omnivore.kml('./kml/KM.kml')
