@@ -85,26 +85,6 @@ function loadImg(imgPath){
 /* *********************** Load KML *********************** */
 
 function loadKml(){
-//    var runLayer1 = omnivore.kml('./kml/fd1.kml')
-//        .on('ready', function() {
-//            myMap.fitBounds(runLayer1.getBounds());
-//        }).addTo(myMap);
-//    var runLayer2 = omnivore.kml('./kml/fd2.kml')
-//        .on('ready', function() {
-//            myMap.fitBounds(runLayer.getBounds());
-//        }).addTo(myMap);
-//    var runLayer3 = omnivore.kml('./kml/fd3.kml')
-//        .on('ready', function() {
-//            myMap.fitBounds(runLayer.getBounds());
-//        }).addTo(myMap);
-//    var runLayer4 = omnivore.kml('./kml/fd4.kml')
-//        .on('ready', function() {
-//            myMap.fitBounds(runLayer.getBounds());
-//        }).addTo(myMap);
-//    var runLayer5 = omnivore.kml('./kml/fd5.kml')
-//        .on('ready', function() {
-//            myMap.fitBounds(runLayer5.getBounds());
-//        }).addTo(myMap);
 
     var runLayer = omnivore.kml('./kml/fd_final.kml')
         .on('ready', function() {
@@ -116,15 +96,27 @@ function loadKml(){
                 myMap.fitBounds(runLayer.getBounds());
             }).addTo(myMap);
 
-//    var kmLayer = omnivore.kml('./kml/KM.kml')
-//        .on('ready', function() {
-//            myMap.fitBounds(runLayer.getBounds());
-//    }).addTo(myMap);
 
-//    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-//        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-//        opacity: 0.2,
-//    }).addTo(myMap);
+    var runLayer = omnivore.kml('./kml/faixadedominiob.kml')
+            .on('ready', function() {
+                myMap.fitBounds(runLayer.getBounds());
+            }).addTo(myMap);
+
+    var runLayer2 = omnivore.kml('./kml/nfdne.kml')
+                    .on('ready', function() {
+                        myMap.fitBounds(runLayer2.getBounds());
+                    }).addTo(myMap);
+
+    var runLayer4 = omnivore.kml('./kml/km_bola101.kml')
+                   .on('ready', function() {
+                       myMap.fitBounds(runLayer4.getBounds());
+
+                       runLayer4.eachLayer(function(layer){
+                       layer.bindPopup(layer.feature.properties.name); //Add click + informação do kml em cada layer
+                       });
+                   })
+
+                   .addTo(myMap);
 }
 
 /* *********************** Central Pin *********************** */
