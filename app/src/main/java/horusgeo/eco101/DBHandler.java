@@ -2072,7 +2072,8 @@ public class DBHandler extends SQLiteOpenHelper {
                 cursor.moveToLast();
                 id = String.valueOf(Integer.parseInt(cursor.getString(0)) + 1);
             } else {
-                id = "301000";
+                //id = "301000";
+                id = "400005";
             }
         }finally{
                 cursor.close();

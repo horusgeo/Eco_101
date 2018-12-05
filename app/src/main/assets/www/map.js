@@ -96,6 +96,15 @@ function loadKml(){
                 myMap.fitBounds(runLayer.getBounds());
             }).addTo(myMap);
 
+    var runLayer2 = omnivore.kml('./kml/km_bola101.kml')
+        .on('ready', function() {
+            myMap.fitBounds(runLayer2.getBounds());
+
+            runLayer2.eachLayer(function(layer){
+            layer.bindPopup(layer.feature.properties.name); //Add click + informação do kml em cada layer
+            });
+        }).addTo(myMap);
+/*
 
     var runLayer = omnivore.kml('./kml/faixadedominiob.kml')
             .on('ready', function() {
@@ -106,17 +115,7 @@ function loadKml(){
                     .on('ready', function() {
                         myMap.fitBounds(runLayer2.getBounds());
                     }).addTo(myMap);
-
-    var runLayer4 = omnivore.kml('./kml/km_bola101.kml')
-                   .on('ready', function() {
-                       myMap.fitBounds(runLayer4.getBounds());
-
-                       runLayer4.eachLayer(function(layer){
-                       layer.bindPopup(layer.feature.properties.name); //Add click + informação do kml em cada layer
-                       });
-                   })
-
-                   .addTo(myMap);
+*/
 }
 
 /* *********************** Central Pin *********************** */
